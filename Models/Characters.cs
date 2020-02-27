@@ -165,6 +165,14 @@ Console.WriteLine(@"
             {
                 Health -= 15;
             }
+            if (Happiness <= 75)
+            {
+                Health -= 2;
+            }
+            else if (Happiness <= 50)
+            {
+                Health -= 5;
+            }
         }
 
         public void Flood()
