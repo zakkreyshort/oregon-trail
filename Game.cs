@@ -22,7 +22,6 @@ namespace Game
         Console.WriteLine("See ya never.");
       }
     }
-
     public static void CreateCharacter()
     {
       Console.WriteLine("Tomorrow, you will depart on your journey to Oregon!  Before you leave, there are a few things we need to take care of.\n First, What is your name?");
@@ -31,16 +30,54 @@ namespace Game
       Console.WriteLine("Hello! Your name is: " + player.Name + "\n Let the journey begin!");
       Journey();
     }
-
     public static void Journey()
     {
       string[] states = { "Missouri", "Kansas", "Nebraska", "Colorado", "Wyoming", "Idaho", "Washington", "Oregon" };
-      Console.WriteLine("Welcome to " + states[0]);
-      Console.WriteLine("----------------------");
-      Locations.EncounterRiver();
-      Locations.Menu();
+      
+      for(int i = 0; i < 8; i++)
+      {
+        Console.WriteLine("Welcome to ");
+        Locations.PrintState(states[i]);
+        player.Miles = 0;
+        for(int j = 0; j < 4; j++)
+        {
+        Program.player.CheckDeath();
+        if (player.Miles <= 25)
+        {
+        Locations.Menu();
+        }
+        else if (player.Miles == 50)
+        {
+          Locations.EncounterRiver();
+        }
+        else if (player.Miles == 75)
+        {
+          Locations.EncounterFort();
+        }
+        else if (player.Miles == 100)
+        {
+          Locations.Menu();
+        }
+        else 
+        {
+          Locations.Menu();
+        }
+        }
+      }
+      Console.WriteLine("Welcome to Oregon, you won the game!");
+      Console.WriteLine(@"
+      /\             /\            /\             /\
+     /\*\           /\*\          /\*\           /\*\  
+    /\O\*\         /\O\*\        /\O\*\         /\O\*\
+   /*/\/\/\       /*/\/\/\      /*/\/\/\       /*/\/\/\ 
+  /\O\/\*\/\     /\O\/\*\/\    /\O\/\*\/\     /\O\/\*\/\ 
+ /\*\/\*\/\/\   /\*\/\*\/\/\  /\*\/\*\/\/\   /\*\/\*\/\/\ 
+/\O\/\/*/\/O/\ /\O\/\/*/\/O/\/\O\/\/*/\/O/\ /\O\/\/*/\/O/\
+      ||             ||            ||             ||
+      ||             ||            ||             ||
+      ||             ||            ||             ||
+      
+      ");
     }
-
-
   }
 }
