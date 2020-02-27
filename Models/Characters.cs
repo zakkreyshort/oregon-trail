@@ -70,6 +70,7 @@ namespace Game.Models
 
         public void Rest(int days)
         {
+            CheckDeath();
             for (int i = 0; i < days; i++)
             {
             NextDay();
@@ -155,6 +156,7 @@ Console.WriteLine(@"
 
         public void NextDay()
         {
+            CheckDeath();
             Food -= 5;
             Days += 1;
             if (Food <= 50)
@@ -177,6 +179,7 @@ Console.WriteLine(@"
 
         public void Flood()
         {
+            CheckDeath();
             Money -= 10;
             Happiness -= 10;
             Health -= 10;
@@ -215,7 +218,7 @@ Console.WriteLine(@"
 
         public void CheckDeath()
         {
-            if (Health == 0)
+            if (Health <= 0)
             {
             Console.WriteLine("Sorry, " + Program.player.Name + ", you died.");
             Console.WriteLine(@"
