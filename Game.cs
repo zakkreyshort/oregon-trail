@@ -38,9 +38,7 @@ namespace Game
       Console.WriteLine("Welcome to " + states[0]);
       Console.WriteLine("----------------------");
       Locations.EncounterRiver();
-      
-
-
+      Locations.Menu();
     }
 
 

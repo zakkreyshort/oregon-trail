@@ -1,0 +1,11 @@
+/Users/Guest/oregon-trail/bin/Debug/netcoreapp2.2/game.deps.json
+/Users/Guest/oregon-trail/bin/Debug/netcoreapp2.2/game.runtimeconfig.json
+/Users/Guest/oregon-trail/bin/Debug/netcoreapp2.2/game.runtimeconfig.dev.json
+/Users/Guest/oregon-trail/bin/Debug/netcoreapp2.2/game.dll
+/Users/Guest/oregon-trail/bin/Debug/netcoreapp2.2/game.pdb
+/Users/Guest/oregon-trail/obj/Debug/netcoreapp2.2/game.csprojAssemblyReference.cache
+/Users/Guest/oregon-trail/obj/Debug/netcoreapp2.2/game.csproj.CoreCompileInputs.cache
+/Users/Guest/oregon-trail/obj/Debug/netcoreapp2.2/game.AssemblyInfoInputs.cache
+/Users/Guest/oregon-trail/obj/Debug/netcoreapp2.2/game.AssemblyInfo.cs
+/Users/Guest/oregon-trail/obj/Debug/netcoreapp2.2/game.dll
+/Users/Guest/oregon-trail/obj/Debug/netcoreapp2.2/game.pdb

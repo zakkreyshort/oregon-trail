@@ -9,6 +9,41 @@ namespace Game.Models
     {
 
 
+      public static void Menu()
+      {
+      Console.WriteLine("what would you like to do next?");
+      Console.WriteLine("[continue] [hunt] [rest] [check status]");
+      string userAction = Console.ReadLine();
+      userAction = userAction.ToLower();
+      if(userAction == "continue")
+      {
+        Program.player.Continue();
+        Menu();
+      }
+      else if (userAction == "hunt")
+      {
+        Program.player.Hunt();
+        Menu();
+      }
+      else if (userAction == "rest")
+      {
+        Console.WriteLine("How many days would you like to rest?");
+        string restDays = Console.ReadLine();
+        int daysOfRest = int.Parse(restDays);
+        Program.player.Rest(daysOfRest);
+        Menu();
+      }
+      else if (userAction == "check status")
+      {
+        Program.player.CheckStatus();
+        Menu();
+      }
+      else
+      {
+       Menu();
+      }
+
+      }
         public static void EncounterRiver()
         {
             Console.WriteLine("Oh no! You have come across a large river bank. You must choose what your group does from here");

@@ -692,9 +692,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Guest/oregon-trail/program.csproj",
-      "projectName": "program",
-      "projectPath": "/Users/Guest/oregon-trail/program.csproj",
+      "projectUniqueName": "/Users/Guest/oregon-trail/game.csproj",
+      "projectName": "game",
+      "projectPath": "/Users/Guest/oregon-trail/game.csproj",
       "packagesPath": "/Users/Guest/.nuget/packages/",
       "outputPath": "/Users/Guest/oregon-trail/obj/",
       "projectStyle": "PackageReference",
