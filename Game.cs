@@ -6,7 +6,7 @@ namespace Game
 {
   public class Program
   {
-   
+  public static Character player = new Character();
     public static void Main()
     {
       Console.WriteLine("The Oregon Trail!/n A Text-Based Adventure Game");
@@ -27,8 +27,21 @@ namespace Game
     {
       Console.WriteLine("Tomorrow, you will depart on your journey to Oregon!  Before you leave, there are a few things we need to take care of.\n First, What is your name?");
       string playerName = Console.ReadLine();
-      Character player = new Character(playerName);
-      Console.WriteLine("Hello! Your name is: " + player.Name);
+      player.SetName(playerName);
+      Console.WriteLine("Hello! Your name is: " + player.Name + "\n Let the journey begin!");
+      Journey();
     }
+
+    public static void Journey()
+    {
+      string[] states = { "Missouri", "Kansas", "Nebraska", "Colorado", "Wyoming", "Idaho", "Washington", "Oregon" };
+      Console.WriteLine("Welcome to " + states[0]);
+      Console.WriteLine("----------------------");
+      Locations.EncounterRiver();
+
+
+    }
+
+
   }
 }
