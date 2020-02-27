@@ -10,6 +10,7 @@ namespace Game.Models
         public int Health { get; set; }
         public int Money { get; set; }
         public int Hunger { get; set; }
+        public int Happiness { get; set; }
 
         public Character()
         {
@@ -17,6 +18,7 @@ namespace Game.Models
             Health = 100;
             Money = 100;
             Hunger = 100;
+            Happiness = 100;
         }
 
         public void SetName(string name)
@@ -39,6 +41,11 @@ namespace Game.Models
             Hunger = 100;
         }
 
+        public void SetHappiness(int happiness)
+        {
+            Happiness = happiness;
+        }
+
         public void AddMoney(int money)
         {
             Money += money;
@@ -47,6 +54,19 @@ namespace Game.Models
         public void PayMoney(int money)
         {
             Money -= money;
+        }
+
+        public void NextDay()
+        {
+            Hunger -= 5;
+        }
+
+        public void Flood()
+        {
+            Money -= 10;
+            Happiness -= 10;
+            Console.WriteLine("You have " + Program.player.Money + " dollars remaining");
+            Console.WriteLine("You have " + Program.player.Happiness + " happiness remaining");
         }
 
     }
