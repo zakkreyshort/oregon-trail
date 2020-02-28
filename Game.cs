@@ -9,7 +9,19 @@ namespace Game
   public static Character player = new Character();
     public static void Main()
     {
-      Console.WriteLine("The Oregon Trail!/n A Text-Based Adventure Game");
+      Console.WriteLine("The Oregon Trail!\n A Text-Based Adventure Game");
+      Console.WriteLine(@"
+      .                  *                     *                   
+            *        .          *        .           *        .       .
+    .         .            .          .     *            .         *
+ *     ,_          *   .-.-------.               .           .          .
+     __(_\   .        //^\\       \  *      .         . *           . 
+   ~( _ )    ___      \\_//_______/                    .--------.-.
+^^^ // >>^^,/ _ )~ ^^/[_=/]______]^^^^^^^^^^^^^^^^^^^^/        //^\\^^^^^^^
+          /_/< \\   /_(=/ (o)  (o)                    \________\\=//
+                           ~    ~             ^^      [________[\__]\
+                                                      (o)    (o)`\=)_\      
+      ");
       Console.WriteLine("Would you like to start a new game? [YES] or [NO]");
       string response = Console.ReadLine();
       response = response.ToLower();

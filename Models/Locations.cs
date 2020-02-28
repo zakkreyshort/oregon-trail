@@ -36,10 +36,35 @@ namespace Game.Models
             {
                 Menu();
             }
-            
+
         }
         public static void EncounterRiver()
         {
+            Console.WriteLine(@"
+                                                          _   _
+                                                         / \O/ \
+      _   _                                                 '
+     / \O/ \
+        '                                     ______      
+                                          ,,/'      )    
+                         ,,___,~~~~'''''~~~         /    
+                        <, ~@                     /
+                          `vvvvvvvv,  ))))       / 
+                             ^^^^^^'             \  
+                              `~~~~~~,     (     | 
+                  _____             ,) \    \   /           _____
+                 (_____>-----------/----\   /--/-----------<_____)
+                                  /      \_/  /             
+          _________________ ___ _|___________ (____________________.
+          \                                                        /| 
+~~ ~~ ~~~~ ~~ ~~~ ~~~~~~~ ~~ ~ ~~~ ~ ~~ ~~~~~~~~~~ ~~~~~~~ ~~~~~~~~~
+                  o    
+                                          o             o          
+                  o          o    
+      o                    
+                                                           o
+                                             o   o            
+            ");
             Console.WriteLine("Oh no! You have come across a large river bank. You must choose what your group does from here");
             Console.WriteLine("[cross] [pay guide for secrets] [float]");
             string playerEncounterRiver = Console.ReadLine();
@@ -84,6 +109,20 @@ namespace Game.Models
         }
         public static void EncounterFort()
         {
+            Console.WriteLine(@"
+                             -|             |-
+         -|                  [-_-_-_-_-_-_-_-]                  |-
+         [-_-_-_-_-]          |             |          [-_-_-_-_-]
+          | o   o |           [  0   0   0  ]           | o   o |
+           |     |    -|       |           |       |-    |     |
+           |     |_-___-___-___-|         |-___-___-___-_|     |
+           |  o  ]              [    0    ]              [  o  |
+           |     ]   o   o   o  [ _______ ]  o   o   o   [     | ----__________
+_____----- |     ]              [ ||||||| ]              [     |
+           |     ]              [ ||||||| ]              [     |
+       _-_-|_____]--------------[_|||||||_]--------------[_____|-_-_
+      ( (__________------------_____________-------------_________) )            
+            ");
             Console.WriteLine("You encountered a fort, where you can [buy] food, [sell] food, replenish [health], [continue], or [rest]");
             string userAtFort = Console.ReadLine();
             if (userAtFort == "buy")
